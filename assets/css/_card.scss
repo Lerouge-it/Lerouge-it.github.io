@@ -1,0 +1,52 @@
+// Outside component of the card (actual card)
+.card {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    .card-shade {
+      animation: Card .2s cubic-bezier(0.31, 1, 0.34, 1) forwards; // 0.2s
+    }
+  }
+}
+
+// Inside component of card (wrap for the content - children)
+.card-wrap {
+  user-select: none;
+}
+
+// Card child component for rendering shade / selected effect
+.card-shade {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 4, .064); //rgba(0, 0, 0, 0.064);
+  z-index: 10;
+  opacity: 0;
+  will-change: transform;
+  pointer-events: none;
+  box-sizing: content-box !important;
+  width: 100%;
+  height: 100%;
+}
+
+
+// Roundednes of borders
+.card-shade {
+  border-radius: 8px;
+}
+
+
+// Keyframes for shade effect for shade component
+@keyframes Card {
+  100% {
+    opacity: 1;
+    transform: translateY(-8px) translateX(-8px);
+    padding: 8px;
+  }
+}

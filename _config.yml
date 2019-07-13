@@ -1,0 +1,7 @@
+name: Lerouge
+markdown: kramdown
+url: lerouge.it
+encoding: UTF-8
+sass:
+  sass_dir: assets/css
+  style: compressed
