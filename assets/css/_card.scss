@@ -3,6 +3,7 @@
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     .card-shade {
@@ -46,7 +47,8 @@
 @keyframes Card {
   100% {
     opacity: 1;
-    transform: translateY(-8px) translateX(-8px);
-    padding: 8px;
+    //transform: translateY(-8px) translateX(-8px);
+    transform: scale(1.08);
+    //padding: 8px;
   }
 }

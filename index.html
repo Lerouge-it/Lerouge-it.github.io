@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html>
 
@@ -13,45 +16,68 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 </head>
 
-<body>
+<body onresize="if (window.innerWidth > 1023) {document.body.className = ''}">
   <main>
     <!-- Navbar -->
-    <div class="header flex mb-6">
-      <div class="logo"><img src="/assets/img/lerouge.png" alt="Logo"></div>
-      <nav class="navbar">
-        <ul class="flex list-none">
-          <li><a href="#" class="text-gray-800">Home</a></li>
-          <li><a href="#" class="text-gray-800">Chi siamo</a></li>
-          <li><a href="#" class="text-gray-800">Dove siamo</a></li>
-          <li><a href="#" class="text-gray-800">Foto & Video</a></li>
-          <li><a href="#" class="bg-red-700 text-white rounded-lg no-underline block">Promozioni</a>
-          </li>
-          <li><a href="#" class="text-gray-800">I prodotti</a></li>
-        </ul>
+    <header>
+      <img src="/assets/img/lerouge.png" id="logo" alt="Lerouge logo" />
+      <nav>
+        <button id="menu_open_btn" onClick="document.body.className = 'menu-opened'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z fill="
+              #111" />
+          </svg>
+        </button>
+        <div id="menu_content">
+          <div id="menu_top_bar">
+            <span>Menu</span>
+            <button id="menu_close_btn" onClick="document.body.className = ''"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z" />
+              </svg>
+            </button>
+          </div>
+          <ul id="menu_links">
+            <li style="animation-delay: 0.06s"><a href="#">Home</a></li>
+            <li style="animation-delay: 0.09s"><a href="#">Chi siamo</a></li>
+            <li style="animation-delay: 0.12s"><a href="#">Dove siamo</a></li>
+            <li style="animation-delay: 0.14s"><a href="#">Foto & Video</a></li>
+            <li style="animation-delay: 0.15s"><a href="#" class="promozioni">Promozioni</a>
+            </li>
+            <li style="animation-delay: 0.21s"><a href="#">I prodotti</a></li>
+          </ul>
+          <div id="menu_bottom_text">Lerouge City Relax 2019</div>
+        </div>
       </nav>
-    </div>
+    </header>
     <!-- Info bar -->
     <div class="infobar flex justify-between">
       <div class="left-part flex">
-        <div
-          class="phone-contact cursor-pointer hover:bg-gray-300 inline-flex items-center h-12 bg-gray-200 px-4 rounded border border-gray-400 ml-4">
-          <div class="phone-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22"
-              viewBox="0 0 172 172" style=" fill:#000000;">
-              <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                style="mix-blend-mode: normal">
-                <path d="M0,172v-172h172v172z" fill="none"></path>
-                <g fill="#333333">
-                  <g id="surface1">
-                    <path
-                      d="M25.08333,32.25v12.9056c0.36393,47.2972 61.2806,101.39714 101.76107,101.76107h13.26953c3.58333,0 6.80273,-2.86947 6.80273,-6.80273v-25.44727c0,-3.58333 -3.2194,-6.80273 -6.80273,-6.80273l-29.0306,-0.36393l-14.69726,15.41113c-9.30827,0 -46.93327,-37.625 -47.2972,-47.2972l15.41113,-14.69727v-29.0306c0,-3.58333 -3.58333,-6.80274 -7.16667,-6.80274h-25.44726c-3.93327,0 -6.80274,3.58333 -6.80274,7.16667">
-                    </path>
+        <div class="hidden sm:block">
+          <div
+            class="phone-contact cursor-pointer hover:bg-gray-300 inline-flex items-center h-12 bg-gray-200 px-4 rounded border border-gray-400 ml-4">
+            <div class="phone-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22"
+                viewBox="0 0 172 172" style=" fill:#000000;">
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <path d="M0,172v-172h172v172z" fill="none"></path>
+                  <g fill="#333333">
+                    <g id="surface1">
+                      <path
+                        d="M25.08333,32.25v12.9056c0.36393,47.2972 61.2806,101.39714 101.76107,101.76107h13.26953c3.58333,0 6.80273,-2.86947 6.80273,-6.80273v-25.44727c0,-3.58333 -3.2194,-6.80273 -6.80273,-6.80273l-29.0306,-0.36393l-14.69726,15.41113c-9.30827,0 -46.93327,-37.625 -47.2972,-47.2972l15.41113,-14.69727v-29.0306c0,-3.58333 -3.58333,-6.80274 -7.16667,-6.80274h-25.44726c-3.93327,0 -6.80274,3.58333 -6.80274,7.16667">
+                      </path>
+                    </g>
                   </g>
                 </g>
-              </g>
-            </svg></div>
-          <div class="phone-number font-sans pl-3 font-medium text-base text-gray-700">345 1209382</div>
+              </svg></div>
+            <div class="phone-number font-sans pl-3 font-medium text-base text-gray-700">345 1209382</div>
+          </div>
         </div>
 
         <a target="_blank" rel="noopener noreferrer"
@@ -79,9 +105,16 @@
       </div>
     </div>
 
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs pl-4 py-4">
+      <span>Home</span><span class="separator">></span>
+      <span>Wellness</span><span class="separator">></span>
+      <span>Massaggi</span>
+    </div>
+
     <!-- Other -->
     <h1
-      class="font-serif text-4xl antialiased font-normal tracking-wider text-center mb-8 mt-16 uppercase text-gray-900">
+      class="font-serif text-3xl sm:text-4xl  antialiased font-normal tracking-wider text-center mb-8 mt-16 uppercase text-gray-900">
       I nostri
       servizi</h1>
 
@@ -96,7 +129,7 @@
             <h3 class="text-xl text-center my-4 tracking-wide text-gray-800 mb-6">Beauty</h3>
             <p class="text-center text-gray-600 text-sm -mt-6 italic mb-6">Trattamenti viso</p>
             <button
-              class="bg-red-700 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider mb-1">Scopri
+              class="bg-red-700 hover:bg-red-800 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider">Scopri
               di
               più</button>
           </div>
@@ -113,7 +146,7 @@
             <h3 class="text-xl text-center my-4 tracking-wide text-gray-800 mb-6">Wellness</h3>
             <p class="text-center text-gray-600 text-sm -mt-6 italic mb-6">Trattamenti, sauna</p>
             <button
-              class="bg-red-700 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider mb-1">Scopri
+              class="bg-red-700 hover:bg-red-800 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider">Scopri
               di
               più</button>
           </div>
@@ -130,7 +163,7 @@
             <h3 class="text-xl text-center my-4 tracking-wide text-gray-800 mb-6">Ayurveda</h3>
             <p class="text-center text-gray-600 text-sm -mt-6 italic mb-6">Massaggi</p>
             <button
-              class="bg-red-700 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider mb-1">Scopri
+              class="bg-red-700 hover:bg-red-800 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider">Scopri
               di
               più</button>
           </div>
@@ -147,7 +180,7 @@
             <h3 class="text-xl text-center my-4 tracking-wide text-gray-800 mb-6">V-shape</h3>
             <p class="text-center text-gray-600 text-sm -mt-6 italic mb-6">Trettamente anticellulare</p>
             <button
-              class="bg-red-700 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider mb-1">Scopri
+              class="bg-red-700 hover:bg-red-800 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider">Scopri
               di
               più</button>
           </div>
@@ -164,7 +197,7 @@
             <h3 class="text-xl text-center my-4 tracking-wide text-gray-800 mb-6">Epilazione</h3>
             <p class="text-center text-gray-600 text-sm -mt-6 italic mb-6">Classica, definitiva</p>
             <button
-              class="bg-red-700 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider mb-1">Scopri
+              class="bg-red-700 hover:bg-red-800 py-2 px-4 text-white flex-shrink rounded inline-block self-center uppercase text-sm tracking-wider">Scopri
               di
               più</button>
           </div>
@@ -174,44 +207,44 @@
 
     </div>
 
-    <div class="novita px-2 pt-8">
+    <div class="novita px-2 pt-8" style="transform: translate3d(0,0,0)">
       <h1
-        class="font-serif text-3xl antialiased font-normal tracking-wider text-center mb-12 mt-20 uppercase text-gray-900 animated fadeIn slow"
+        class="font-serif text-2xl sm:text-3xl antialiased font-normal tracking-wider text-center mb-12 pt-20 uppercase text-gray-900 animated fadeIn slow"
         style="animation-delay: 0.5s;">
         Ultime
         novita'</h1>
 
-      <div class="flex mb-32">
+      <div class="flex justify-center flex-wrap mb-32">
 
-        <div class="w-1/3 px-2 animated fadeIn slow" style="animation-delay: 0.5s;">
+        <div class="max-w-sm lg:w-1/3 md:w-1/2 w-full px-2 my-4 animated fadeIn slow" style="animation-delay: 0.5s;">
           <div class="card">
             <div class="card-wrap flex flex-col align-center">
               <img class="rounded flex-shrink inline-block self-center"
                 src="https://www.lerouge.it/wp-content/uploads/2014/11/pagodil-11-600x400.jpg" alt="image">
-              <p class="text-xl text-center mt-4 mb-1 tracking-wide text-gray-800">Pagodil</p>
+              <p class="text-xl text-center mt-4 tracking-wide text-gray-800">Pagodil</p>
             </div>
             <div class="card-shade"></div>
           </div>
         </div>
 
-        <div class="w-1/3 px-2 animated fadeIn slow" style="animation-delay: 0.6s;">
+        <div class="max-w-sm md:w-1/2 lg:w-1/3 w-full px-2 my-4 animated fadeIn slow" style="animation-delay: 0.6s;">
           <div class="card">
             <div class="card-wrap flex flex-col align-center">
               <img class="rounded flex-shrink inline-block self-center"
                 src="https://www.lerouge.it/wp-content/uploads/2014/11/Fidelity-card-250-pxl.jpg" alt="image">
-              <p class="text-xl text-center mt-4 mb-1 tracking-wide text-gray-800">Fidelity Card</p>
+              <p class="text-xl text-center mt-4 tracking-wide text-gray-800">Fidelity Card</p>
             </div>
             <div class="card-shade"></div>
           </div>
         </div>
 
-        <div class="w-1/3 px-2 animated fadeIn slow" style="animation-delay: 0.7s;">
+        <div class="max-w-sm lg:w-1/3 md:w-1/2 w-full px-2 my-4 animated fadeIn slow" style="animation-delay: 0.7s;">
           <div class="card">
             <div class="card-wrap flex flex-col align-center">
               <img class="rounded flex-shrink inline-block self-center"
                 src="https://www.lerouge.it/wp-content/uploads/2014/11/Premio-Eccelllenze-Lerouge-600x400.jpg"
                 alt="image">
-              <p class="text-xl text-center mt-4 mb-1 tracking-wide text-gray-800">Eccellenze Italiane</p>
+              <p class="text-xl text-center mt-4 tracking-wide text-gray-800">Eccellenze Italiane</p>
             </div>
             <div class="card-shade"></div>
           </div>
@@ -220,32 +253,7 @@
       </div>
   </main>
 
-  <footer class="bg-gray-200">
-    <div class="box flex px-2">
-      <div class="w-1/3 px-2">
-        <div class="bg-gray-400">hola</div>
-      </div>
-
-      <div class="w-1/3 px-2">
-        <div class="bg-gray-400">hola</div>
-      </div>
-
-      <div class="w-1/3 px-2">
-        <div class="bg-gray-400">hola</div>
-      </div>
-    </div>
-  </footer>
-
-  <footer class="bg-red-800 py-5">
-    <p class="text-white text-center text-sm tracking-wider">© <span class="font-sans tracking-normal">2016</span> All
-      Rights
-      Reserved. Lerouge di Fabiola Rondi -
-      P.IVA
-      e C.F.
-      <span class="font-sans tracking-normal">02114210160</span> |
-      Sito
-      realizzato da: Chris Šalgaj</p>
-  </footer>
+  {% include footer.html %}
 </body>
 
 <!--
