@@ -34,6 +34,8 @@ header {
       border: 0;
       background: transparent;
       -webkit-tap-highlight-color: transparent;
+      position: sticky;
+      top: 12px;
     }
 
     button#menu_open_btn {}
@@ -178,12 +180,19 @@ header {
 
             a {
               display: block;
-              height: 70px;
+              height: 64px;
               line-height: 70px;
               padding-left: 2.125rem;
               //font-size: 1.125rem;
               letter-spacing: 0.025em;
               color: #1a202c;
+
+              display: flex;
+              align-items: center;
+
+              img {
+                margin-right: 1rem;
+              }
             }
           }
         }
