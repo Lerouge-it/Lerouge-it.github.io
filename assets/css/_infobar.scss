@@ -33,7 +33,7 @@
     }
 
     .infobar_box {
-      padding: 0 1rem;
+      padding: 0 .8rem;
 
       &:hover {
         transition: background-color .2s cubic-bezier(0.31, 1, 0.34, 1);
@@ -43,7 +43,7 @@
 
     #infobar_phone {
       #infobar_phone_icon {
-        margin-right: 1rem;
+        margin-right: .8rem;
       }
 
       span {
@@ -55,7 +55,7 @@
 
     #infobar_visita {
       #infobar_visita_icon {
-        margin-right: 1rem;
+        margin-right: .6rem;
 
         svg {}
       }

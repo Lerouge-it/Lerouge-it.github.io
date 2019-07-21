@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Title -->
+  <title>Lerouge</title>
+  <!-- Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <!-- Styles -->
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/assets/css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+
+</head>
+
+<body onresize="if (window.innerWidth > 1023) {document.body.className = ''}" id="my-scrollbar'">
+
+  {% include header.html %}
+
+  <main>{{content}}</main>
+
+  {% include footer.html %}
+
+</body>
+
+<!--
+
+<div class="card">
+  <div class="card-wrap">
+    <h1 class="inline-block text-4xl font-sans">Another lerouge</h1>
+  </div>
+    div class="card-shade" />
+</div>
+
+-->
+
+</html>
